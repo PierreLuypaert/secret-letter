@@ -1,0 +1,5 @@
+.clickable-div {
+    cursor: pointer;
+    position:absolute;
+    background-color: red;
+}
