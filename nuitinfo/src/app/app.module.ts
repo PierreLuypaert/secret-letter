@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TetrisComponent } from './components/tetris/tetris.component';
+import { BoardComponent } from './components/tetris/board/board.component';
 import { PremiereScenePereNoelComponent } from './components/premiere-scene-pere-noel/premiere-scene-pere-noel.component';
 import { ZoneClickableComponent } from './components/zone-clickable/zone-clickable.component';
 import { CarteComponent } from './components/carte/carte.component';
@@ -14,6 +15,7 @@ import { CarteComponent } from './components/carte/carte.component';
   declarations: [
     AppComponent,
     TetrisComponent,
+    BoardComponent,
     PremiereScenePereNoelComponent,
     ZoneClickableComponent,
     CarteComponent,
