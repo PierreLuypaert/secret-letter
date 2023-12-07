@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit, AfterViewInit, NgModule } from '@angular/core';
+import { BoardComponent } from "./board/board.component";
+
 
 @Component({
   selector: 'app-tetris',
@@ -7,13 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TetrisComponent implements OnInit {
 
-
-  
   constructor() { }
 
   ngOnInit(): void {
   }
 
-
+  initBoard() {
+  }
 
 }

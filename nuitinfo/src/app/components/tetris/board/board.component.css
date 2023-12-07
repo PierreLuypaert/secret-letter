@@ -1,0 +1,15 @@
+* {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.grid {
+  display: flex;
+}
+
+.with-border {
+  border: 2px solid #000;
+}
+
+.right-column {
+  margin-left: 20px; /* Ajoutez ici la marge souhaitée entre le canvas et la colonne de droite */
+}
