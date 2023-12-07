@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-tetris',
   templateUrl: './tetris.component.html',
@@ -8,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 export class TetrisComponent implements OnInit {
 
 
-  
+
   constructor() { }
 
   ngOnInit(): void {
