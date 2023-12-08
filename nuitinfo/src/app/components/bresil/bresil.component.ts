@@ -31,7 +31,8 @@ export class BresilComponent implements OnInit {
     {
       this.jsonData = {};
         console.log("end");
-        this.router.navigate(["chine"]);
+        this.router.navigate(['carte'], { queryParams: { numero: 3 } }); 
+    
     }
     if ( this.currentMessage < this.jsonData.length-1)
     {

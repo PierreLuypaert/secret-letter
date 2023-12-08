@@ -1,12 +1,12 @@
 <div class="w-screen h-screen bg-oceanie">
-    <app-zone-clickable [idZone]="'test_click'" (divClicked)="handleDivClick($event)" 
-        [position]="{ top: 500, left: 1100 }" 
-        [taille]="{ width: 400, height: 350 }">
+    <app-zone-clickable [idZone]="'ocean'" (divClicked)="handleDivClick($event)" 
+        [position]="{ top: 750, left: 0 }" 
+        [taille]="{ width: 2000, height: 350 }">
     </app-zone-clickable>
 
-    <app-zone-clickable [idZone]="'test_click2'" (divClicked)="handleDivClick($event)" 
-        [position]="{ top: 250, left: 400 }" 
-        [taille]="{ width: 200, height: 150 }">
+    <app-zone-clickable [idZone]="'corail'" (divClicked)="handleDivClick($event)" 
+        [position]="{ top: 800, left: 75 }" 
+        [taille]="{ width: 300, height: 200 }">
     </app-zone-clickable>
 
     <ng-container *ngIf="this.jsonData.length > 0 && this.jsonData[this.currentMessage].texte">
