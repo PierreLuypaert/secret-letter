@@ -23,7 +23,12 @@ export class CarteComponent implements OnInit {
       });
     });
     
+    
+
+
   }
+
+
 
   handleDivClick(idZone: string): void {
       const maMap = document.getElementById("map-" +idZone);
