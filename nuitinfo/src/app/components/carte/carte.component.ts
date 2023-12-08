@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-carte',
@@ -6,10 +8,104 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carte.component.css']
 })
 export class CarteComponent implements OnInit {
-
-  constructor() { }
+  jsonData: any = {};
+  currentMessage: number = 0;
+  step: number = 1;
+  zoneClick: string[] = ["arctique","usa", "bresil", "chine", "oceanie"  ];
+  mapOpened: any;
+  constructor(private route: ActivatedRoute, private router: Router, private http: HttpClient, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
+    // Récupérez le paramètre 'numero' de l'URL
+    this.route.queryParams.subscribe(params => {
+      this.step = +params['numero']; // Utilisez le + pour convertir la chaîne en nombre
+      // Faites quelque chose avec le nombre ici
+      this.http.get('/assets/carte/carte'+this.step+'.json').subscribe(data => {
+        this.jsonData = data;
+      });
+    });
+    
   }
 
+  handleDivClick(idZone: string): void {
+      const maMap = document.getElementById("map-" +idZone);
+      console.log(this.step);
+      console.log(this.zoneClick.indexOf(idZone));
+
+      // Vérifiez si l'élément existe avant de tenter de le modifier
+      if (maMap && this.step > this.zoneClick.indexOf(idZone)) {
+        console.log("ici");
+        // Modifiez la classe
+        // if (!this.isDisplayed){
+        maMap.classList.remove("hidden");
+        maMap.classList.add("block");
+        this.mapOpened = maMap;
+        // this.isDisplayed = true;
+        this.zoneClick.forEach((zone) => {
+          let maZoneCLick = document.getElementById(zone);
+          if (maZoneCLick) {
+            maZoneCLick.classList.remove("block");
+            maZoneCLick.classList.add("hidden");
+  
+          }
+        });
+      } 
+      console.log('indexof' + this.zoneClick.indexOf(idZone))
+      if( this.step == this.zoneClick.indexOf(idZone)) {
+        console.log(this.jsonData[this.currentMessage].type=="click");
+        if (this.jsonData[this.currentMessage].type=="click" && idZone == this.jsonData[this.currentMessage].div_id) {
+          this.cross();
+        }
+      }
+  }
+
+  cross(): void {
+    if ( this.currentMessage == this.jsonData.length-1 )
+    {
+      this.jsonData = {};
+      switch(this.step) {
+        case 1: 
+            this.router.navigate(["usa"]);
+            break; 
+        case 2: 
+          this.router.navigate(["bresil"]);
+            break; 
+        case 3: 
+          this.router.navigate(["chine"]);
+            break; 
+        case 4: 
+          this.router.navigate(["oceanie"]);
+            break; 
+        case 5: 
+          this.router.navigate(["menu"]);
+            break; 
+      } 
+    } else {
+      this.cdr.detectChanges();
+      this.currentMessage++;
+    }
+  }
+
+  closeIframe() {
+
+    // Vérifiez si l'élément existe avant de tenter de le modifier
+    if (this.mapOpened) {
+      this.mapOpened.classList.remove("block");
+      this.mapOpened.classList.add("hidden");
+      // this.isDisplayed = false;
+      this.zoneClick.forEach((zone) => {
+        let maZoneCLick = document.getElementById(zone);
+        if (maZoneCLick) {
+          maZoneCLick.classList.remove("hidden");
+          maZoneCLick.classList.add("block");
+    
+        }
+      });
+      this.mapOpened = null;
+
+    }
+  }
+
+
 }
+

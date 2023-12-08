@@ -30,8 +30,7 @@ export class ArctiqueComponent implements OnInit {
     if ( this.currentMessage == this.jsonData.length-1 )
     {
       this.jsonData = {};
-        console.log("end");
-        this.router.navigate(["usa"]);
+        this.router.navigate(['carte'], { queryParams: { numero: 1 } }); 
     }
     if ( this.currentMessage < this.jsonData.length-1)
     {

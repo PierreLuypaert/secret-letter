@@ -1,0 +1,6 @@
+
+.bg-carte {
+    background-image: url('/assets/carte/background1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

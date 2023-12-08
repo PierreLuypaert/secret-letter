@@ -1,0 +1,19 @@
+[
+    {
+      "type": "message",
+      "texte": "Voici la carte ! C'est ici que nous tracerons notre chemin..."
+    },
+    {
+        "type": "message",
+        "texte": "Nous avons déjà fait l'Arctique, passe ta souris pour voir des analyses !"
+    },
+    {
+        "type": "message",
+        "texte": "Passons désormais à l'Amérique..."
+    },
+    {
+        "type": "click",
+        "div_id":"usa"
+    }
+]
+  
