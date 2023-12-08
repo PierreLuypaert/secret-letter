@@ -14,7 +14,7 @@ export class PremiereScenePereNoelComponent implements OnInit {
   constructor(private router: Router, private http: HttpClient, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
-    this.http.get('/assets/scenes/premiere-scene-pere-noel/texte.json').subscribe(data => {
+    this.http.get('/assets/scenes/premiere-scene-pere-noel/arctique.json').subscribe(data => {
       this.jsonData = data;
     });
   }
