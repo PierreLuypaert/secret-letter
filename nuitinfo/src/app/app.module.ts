@@ -14,6 +14,7 @@ import { BulleComponent } from './components/bulle/bulle.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ArctiqueComponent } from './components/arctique/arctique.component';
 import { OceanieComponent } from './components/oceanie/oceanie.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { OceanieComponent } from './components/oceanie/oceanie.component';
     BulleComponent,
     ArctiqueComponent,
     OceanieComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,

@@ -24,7 +24,7 @@
         "texte": "Est-ce que les océans jouent un rôle dans l’absorption des gaz à effet de serre ?",
         "reponses": [
               {
-                  "texte":"Oui!",
+                  "texte":"Oui",
                   "isValid":true
               },
               {
