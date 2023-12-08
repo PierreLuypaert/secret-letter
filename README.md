@@ -39,7 +39,7 @@ Rigrole est une petite boule de Noël qui a toujours rêver de découvrir le mon
 
 Le premier oeuf de paques est le jeu tetris implémenté dans la page 404. Pour y accéder, il suffit de rentré un nom de page invalide, par exemple sur la route `/test`.
 
-## Open Data et Géo-Intelligence
+## Open Data et Géo-Intelligence
 À la fin de chaque chapitre, une carte ou un graphique interactif(ve) vient illustrer et syntétiser les questions en se basant sur des données d'OpenData.
 
 
