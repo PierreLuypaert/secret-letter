@@ -11,8 +11,27 @@ body {
     background-size: cover;
 }
 
+
 .bg-arctique {
     background-image: url('/assets/scenes/premiere-scene-pere-noel/background2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-usa {
+    background-image: url('/assets/scenes/usa/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-bresil {
+    background-image: url('/assets/scenes/bresil/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-chine {
+    background-image: url('/assets/scenes/chine/background.png');
     background-repeat: no-repeat;
     background-size: cover;
 }

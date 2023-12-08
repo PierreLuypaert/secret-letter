@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ArctiqueComponent } from './components/arctique/arctique.component';
 import { OceanieComponent } from './components/oceanie/oceanie.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { UsaComponent } from './components/usa/usa.component';
+import { BresilComponent } from './components/bresil/bresil.component';
+import { ChineComponent } from './components/chine/chine.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,9 @@ import { MenuComponent } from './components/menu/menu.component';
     ArctiqueComponent,
     OceanieComponent,
     MenuComponent,
+    UsaComponent,
+    BresilComponent,
+    ChineComponent,
   ],
   imports: [
     BrowserModule,
