@@ -127,7 +127,7 @@ export class BoardComponent implements OnInit {
       if (!this.drop()) {
         this.gameOver();
         return;
-      } else if (this.points >= 44){
+      } else if (this.points >= 404){
         this.win();
         return;
       }
