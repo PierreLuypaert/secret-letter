@@ -22,7 +22,7 @@
       {
         "type": "message",
         "perso":"papa",
-        "texte": "Montre-moi quel est le moyen de transport privilégié par la population ?"
+        "texte": "Montre-moi quel est le moyen de transport privilégié par la population ? (ferme la pop-up puis clique sur le moyen de transport)"
       },
       {
         "type": "click",
