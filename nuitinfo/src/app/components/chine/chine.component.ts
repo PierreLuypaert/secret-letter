@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {playAudio, stopAllAudio} from "../../utils/sound";
 
 @Component({
   selector: 'app-chine',
@@ -14,6 +15,7 @@ export class ChineComponent implements OnInit {
   constructor(private router: Router, private http: HttpClient, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
+    playAudio("/assets/sounds/chine.mp3",true);
     this.http.get('/assets/scenes/chine/chine.json').subscribe(data => {
       this.jsonData = data;
     });
@@ -29,6 +31,7 @@ export class ChineComponent implements OnInit {
     if ( this.currentMessage == this.jsonData.length-1 )
     {
       this.jsonData = {};
+      stopAllAudio();
       this.router.navigate(['carte'], { queryParams: { numero: 4 } }); 
     }
     if ( this.currentMessage < this.jsonData.length-1)
