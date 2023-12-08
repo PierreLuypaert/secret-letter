@@ -1,11 +1,11 @@
 # nuit-info-iti5
 
 
-## Context
+## Contexte
 
-Ce projet a été créer à l'occasion de la nuit de l'info 2023.
+Ce projet a été créé à l'occasion de la nuit de l'info 2023.
 
-L'objectif est de réaliser un site web sensibilisant au changement climatique.
+L'objectif est de réaliser un site web sensibilisant aux changements climatiques.
 
 Vous trouverez notre projet à [ce lien](https://secretletter.web.app/)
 
@@ -37,7 +37,11 @@ Rigrole est une petite boule de Noël qui a toujours rêver de découvrir le mon
 
 ## L'Oeuf de Pâques
 
-Le premier oeuf de paques est le jeux tetris implémenté dans la page 404. Pour y accéder, il suffit de rentré un nom de page invalide, par exemple tests.
+Le premier oeuf de paques est le jeu tetris implémenté dans la page 404. Pour y accéder, il suffit de rentré un nom de page invalide, par exemple sur la route `/test`.
+
+## Open Data et Géo-Intelligence
+À la fin de chaque chapitre, une carte ou un graphique interactif(ve) vient illustrer et syntétiser les questions en se basant sur des données d'OpenData.
+
 
 ## Installation :
 

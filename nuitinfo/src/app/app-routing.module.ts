@@ -9,9 +9,11 @@ import { MenuComponent } from './components/menu/menu.component';
 import { UsaComponent } from './components/usa/usa.component';
 import { BresilComponent } from './components/bresil/bresil.component';
 import { ChineComponent } from './components/chine/chine.component';
+import {CreditsComponent} from "./components/credits/credits.component";
 
 const routes: Routes = [
   { path: 'chine', component: ChineComponent, data: { animation: 'fadeInOut' } },
+  { path: 'credits', component: CreditsComponent, data: { animation: 'fadeInOut' } },
   { path: 'bresil', component: BresilComponent, data: { animation: 'fadeInOut' } },
   { path: 'usa', component: UsaComponent, data: { animation: 'fadeInOut' } },
   { path: 'oceanie', component: OceanieComponent, data: { animation: 'fadeInOut' } },

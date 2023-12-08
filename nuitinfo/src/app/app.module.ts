@@ -18,6 +18,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { UsaComponent } from './components/usa/usa.component';
 import { BresilComponent } from './components/bresil/bresil.component';
 import { ChineComponent } from './components/chine/chine.component';
+import { CreditsComponent } from './components/credits/credits.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ChineComponent } from './components/chine/chine.component';
     UsaComponent,
     BresilComponent,
     ChineComponent,
+    CreditsComponent,
   ],
   imports: [
     BrowserModule,

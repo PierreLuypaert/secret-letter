@@ -29,7 +29,7 @@ export class ChineComponent implements OnInit {
     if ( this.currentMessage == this.jsonData.length-1 )
     {
       this.jsonData = {};
-      this.router.navigate(["oceanie"]);
+      this.router.navigate(['carte'], { queryParams: { numero: 4 } }); 
     }
     if ( this.currentMessage < this.jsonData.length-1)
     {

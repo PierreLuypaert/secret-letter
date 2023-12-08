@@ -29,7 +29,7 @@ export class UsaComponent implements OnInit {
     if ( this.currentMessage == this.jsonData.length-1 )
     {
       this.jsonData = {};
-      this.router.navigate(["bresil"]);
+      this.router.navigate(['carte'], { queryParams: { numero: 2 } }); 
     }
     if ( this.currentMessage < this.jsonData.length-1)
     {

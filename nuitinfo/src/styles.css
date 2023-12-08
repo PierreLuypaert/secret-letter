@@ -42,11 +42,6 @@ body {
     background-size: cover;
 }
 
-.bg-carte {
-    background-image: url('/assets/carte/background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .bg-tetris {
     background-image: url('/assets/tetris/tundrav2.png');
