@@ -2,9 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body {
+    overflow: hidden;
+}
 .bg-premiere-scene {
     background-image: url('/assets/scenes/premiere-scene-pere-noel/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-arctique {
+    background-image: url('/assets/scenes/premiere-scene-pere-noel/background2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-oceanie {
+    background-image: url('/assets/scenes/oceanie/background.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -20,3 +34,24 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.bg-perso {
+    background-image: url('/assets/perso.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+    z-index: 99999;
+    position: absolute;
+    animation: rotateAnimation 3s ease-in-out infinite;
+}
+
+@keyframes rotateAnimation {
+    0%, 100% {
+        transform: rotate(-15deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+}
+

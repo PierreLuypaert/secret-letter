@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-premiere-scene-pere-noel',
@@ -7,17 +8,34 @@ import { Router } from '@angular/router';
   styleUrls: ['./premiere-scene-pere-noel.component.css']
 })
 export class PremiereScenePereNoelComponent implements OnInit {
+  jsonData: any = {};
+  currentMessage: number = 0;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private http: HttpClient, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
+    this.http.get('/assets/scenes/premiere-scene-pere-noel/chalet.json').subscribe(data => {
+      this.jsonData = data;
+    });
   }
 
-  handleDivClick(data: string): void {
-    // Fonction à exécuter lors du clic sur la div cliquable avec des données spécifiques
-    console.log('Div cliquée dans le composant parent avec les données :', data);
-    // Utilisez le Router pour naviguer vers la route /carte
-    this.router.navigate(['/carte']);
+  handleDivClick(idZone: string): void {
+    if (this.jsonData[this.currentMessage].type=="click" && idZone == this.jsonData[this.currentMessage].div_id) {
+      this.cross();
+    }
+  }
+
+  cross(): void {
+    if ( this.currentMessage == this.jsonData.length-1 )
+    {
+      this.jsonData = {};
+      this.router.navigate(["arctique"]);
+    }
+    if ( this.currentMessage < this.jsonData.length-1)
+    {
+      this.cdr.detectChanges();
+      this.currentMessage++;
+    }
   }
 
 }

@@ -7,10 +7,11 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ZoneClickableComponent {
   @Output() divClicked = new EventEmitter<string>();
+  @Input() idZone: string="";
   @Input() taille: { width: number, height: number } = { width: 100, height: 100 };  
   @Input() position: { top: number, left: number } = { top: 0, left: 0 };
   
   onClick(): void {
-    this.divClicked.emit("MAISON");
+    this.divClicked.emit(this.idZone);
   }
 }

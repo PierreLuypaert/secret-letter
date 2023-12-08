@@ -10,6 +10,10 @@ import { BoardComponent } from './components/tetris/board/board.component';
 import { PremiereScenePereNoelComponent } from './components/premiere-scene-pere-noel/premiere-scene-pere-noel.component';
 import { ZoneClickableComponent } from './components/zone-clickable/zone-clickable.component';
 import { CarteComponent } from './components/carte/carte.component';
+import { BulleComponent } from './components/bulle/bulle.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ArctiqueComponent } from './components/arctique/arctique.component';
+import { OceanieComponent } from './components/oceanie/oceanie.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +23,15 @@ import { CarteComponent } from './components/carte/carte.component';
     PremiereScenePereNoelComponent,
     ZoneClickableComponent,
     CarteComponent,
+    BulleComponent,
+    ArctiqueComponent,
+    OceanieComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
