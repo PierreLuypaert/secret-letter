@@ -1,0 +1,65 @@
+[
+    {
+      "type": "message",
+      "texte": "Je suis Riglote, une boule de Noël pas comme les autres. Contrairement à mes compères qui pendent joyeusement sur le grand sapin de l'atelier du Père Noël, je rêve d'aventures extraordinaires."
+    },
+    {
+      "type": "message",
+      "texte": "Un soir, je fus soudainement animée d'une énergie magique. Je me mis à virevolter dans l'air avant de me poser délicatement dans la main du joyeux vieillard."
+    },
+    {
+      "type": "message",
+      "texte": "Qu'est-ce qui te prend, Riglote ? s'exclama le Père Noël, surpris."
+    },
+    {
+      "type": "message",
+      "texte": "Je scintillai joyeusement et murmurai dans une voix étincelante : Père Noël, cette année, je veux voir le monde et faire partie de la tournée des cadeaux. "
+    },
+    {
+      "type": "message",
+      "texte": "Le Père Noël, souriant devant ma demande inhabituelle, hocha la tête et dit : Eh bien, Riglote, monte à bord du traîneau. Cette année, tu seras ma compagne de voyage ! "
+    },
+    {
+      "type": "message",
+      "texte": "Au début de notre aventure nous passons par l'Arctique. Il me dit que la fonte des glaces était parfaitement visible."
+    },
+    {
+        "type": "question",
+        "texte": "Est ce que tu sais quel est le taux de fonte des glaces ?",
+        "reponses": [
+              {
+                  "texte":"20 % par an",
+                  "isValid":false
+              },
+              {
+                  "texte":"15 % tous les 5 ans ",
+                  "isValid":false
+              },
+              {
+                  "texte":"13 % tous les 10 ans",
+                  "isValid":true
+              },
+              {
+                "texte":"10 % tous les 50 ans",
+                "isValid":false
+              }
+          ]
+    },
+    {
+      "type": "message",
+      "texte": "En effet ma petite Riglote, 13% tous les 10 ans selon le GIEC; cela implique notamment la montée des eaux et le réchauffement des océans"
+    },
+    {
+      "type": "message",
+      "texte": "Père Noël: Continuons ensemble notre tour du monde pour observer les causes de ce réchauffement climatique."
+    },
+    {
+      "type": "message",
+      "texte": "J'espère qu'on trouvera aussi des solutions pour réduire son impact !"
+    },
+    {
+        "type": "end-message",
+        "texte": "Bravo tu as fini la première partie de l'aventure!"
+    }
+  ]
+  
