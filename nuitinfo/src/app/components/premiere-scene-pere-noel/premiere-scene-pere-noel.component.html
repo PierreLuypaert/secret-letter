@@ -3,4 +3,7 @@
         [position]="{ top: 300, left: 100 }" 
         [taille]="{ width: 200, height: 150 }">
     </app-zone-clickable>
+    <ng-container *ngIf="this.jsonData.length > 0">
+        <app-bulle (divClicked)="cross($event)" [messageObject]="this.jsonData[this.currentMessage]"></app-bulle>
+    </ng-container>
 </div>

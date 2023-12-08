@@ -1,0 +1,29 @@
+[
+    {
+      "type": "message",
+      "texte": "Salut c'est Brice et Pierre"
+    },
+    {
+        "type": "question",
+        "texte": "Comment tu t'appelles ?",
+        "reponses": [
+              {
+                  "texte":"Teuse!",
+                  "isValid":true
+              },
+              {
+                  "texte":"Romain",
+                  "isValid":true
+              },
+              {
+                  "texte":"Francis",
+                  "isValid":false
+              }
+          ]
+    },
+    {
+        "type": "end-message",
+        "texte": "Bravo !"
+    }
+  ]
+  

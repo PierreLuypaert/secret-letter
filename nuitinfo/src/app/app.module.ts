@@ -9,6 +9,8 @@ import { TetrisComponent } from './components/tetris/tetris.component';
 import { PremiereScenePereNoelComponent } from './components/premiere-scene-pere-noel/premiere-scene-pere-noel.component';
 import { ZoneClickableComponent } from './components/zone-clickable/zone-clickable.component';
 import { CarteComponent } from './components/carte/carte.component';
+import { BulleComponent } from './components/bulle/bulle.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,11 +19,13 @@ import { CarteComponent } from './components/carte/carte.component';
     PremiereScenePereNoelComponent,
     ZoneClickableComponent,
     CarteComponent,
+    BulleComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
