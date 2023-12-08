@@ -33,7 +33,7 @@ export class ArctiqueComponent implements OnInit {
     {
       this.jsonData = {};
         console.log("end");
-        //this.router.navigate(["arctique"]);
+        this.router.navigate(["usa"]);
     }
     if ( this.currentMessage < this.jsonData.length-1)
     {

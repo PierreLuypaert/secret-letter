@@ -20,6 +20,16 @@
         "texte": "Et le temps est idéal pour aller surf-... pour aller LIVRER des cadeaux de Noël."
       },
       {
+        "type": "message",
+        "perso": "perso",
+        "texte": "Heureusement que l'océan est à deux pas. Littéralement."
+      },
+      {
+        "type": "message",
+        "perso": "papa",
+        "texte": "On peux aller y jeter un oeil Riglote. Juste un oeil, pas deux."
+      },
+      {
         "type": "click",
         "div_id":"test_click"
     },
@@ -47,6 +57,18 @@
         "type": "message",
         "perso": "papa",
         "texte": "Cela s’explique par 2 phénomènes ; la dissolution dans l’eau du CO2 et la photosynthèse du phytoplancton." 
+      },
+      {
+        "type": "message",
+        "texte": "En parlant de phytoplancton, ce ne sont pas les seuls animaux fantastiques qui peuplent les océans." 
+      },
+      {
+        "type": "message",
+        "texte": "On a des poissons, des poissons, encore des poissons, mais quand même un peu de corail." 
+      },
+      {
+        "type": "message",
+        "texte": "Tu as déjà vu à quoi ça ressemble du corail ?" 
       },
       {
         "type": "click",
