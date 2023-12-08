@@ -13,6 +13,7 @@ import { CarteComponent } from './components/carte/carte.component';
 import { BulleComponent } from './components/bulle/bulle.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ArctiqueComponent } from './components/arctique/arctique.component';
+import { OceanieComponent } from './components/oceanie/oceanie.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ArctiqueComponent } from './components/arctique/arctique.component';
     CarteComponent,
     BulleComponent,
     ArctiqueComponent,
+    OceanieComponent,
   ],
   imports: [
     BrowserModule,

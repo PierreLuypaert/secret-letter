@@ -17,6 +17,12 @@ body {
     background-size: cover;
 }
 
+.bg-oceanie {
+    background-image: url('/assets/scenes/oceanie/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .bg-carte {
     background-image: url('/assets/carte/background.png');
     background-repeat: no-repeat;
