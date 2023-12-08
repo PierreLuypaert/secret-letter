@@ -31,7 +31,7 @@ export class OceanieComponent implements OnInit {
     if ( this.currentMessage == this.jsonData.length-1 )
     {
       this.jsonData = {};
-      this.router.navigate(["menu"]);
+      this.router.navigate(['carte'], { queryParams: { numero: 5 } }); 
     }
     if ( this.currentMessage < this.jsonData.length-1)
     {
