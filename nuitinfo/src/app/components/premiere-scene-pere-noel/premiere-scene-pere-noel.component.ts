@@ -19,14 +19,13 @@ export class PremiereScenePereNoelComponent implements OnInit {
     });
   }
 
-  handleDivClick(data: string): void {
-    // Fonction à exécuter lors du clic sur la div cliquable avec des données spécifiques
-    console.log('Div cliquée dans le composant parent avec les données :', data);
-    // Utilisez le Router pour naviguer vers la route /carte
-    this.router.navigate(['/carte']);
+  handleDivClick(idZone: string): void {
+    if (this.jsonData[this.currentMessage].type=="click" && idZone == this.jsonData[this.currentMessage].div_id) {
+      this.cross();
+    }
   }
 
-  cross(data: string): void {
+  cross(): void {
     if ( this.currentMessage == this.jsonData.length-1 )
       this.jsonData = {};
     else {

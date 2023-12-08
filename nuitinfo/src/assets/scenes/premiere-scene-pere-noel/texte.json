@@ -22,7 +22,19 @@
           ]
     },
     {
-        "type": "end-message",
+        "type": "click",
+        "div_id":"test_click"
+    },
+    {
+        "type": "message",
+        "texte": "Bravo !"
+    },
+    {
+        "type": "click",
+        "div_id":"test_click2"
+    },
+    {
+        "type": "message",
         "texte": "Bravo !"
     }
   ]
