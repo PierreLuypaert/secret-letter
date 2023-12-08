@@ -1,20 +1,20 @@
+import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-arctique',
-  templateUrl: './arctique.component.html',
-  styleUrls: ['./arctique.component.css']
+  selector: 'app-chine',
+  templateUrl: './chine.component.html',
+  styleUrls: ['./chine.component.css']
 })
-export class ArctiqueComponent implements OnInit {
+export class ChineComponent implements OnInit {
   jsonData: any = {};
   currentMessage: number = 0;
 
   constructor(private router: Router, private http: HttpClient, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
-    this.http.get('/assets/scenes/premiere-scene-pere-noel/arctique.json').subscribe(data => {
+    this.http.get('/assets/scenes/chine/chine.json').subscribe(data => {
       this.jsonData = data;
     });
   }
@@ -26,12 +26,10 @@ export class ArctiqueComponent implements OnInit {
   }
 
   cross(): void {
-    console.log(this.currentMessage);
     if ( this.currentMessage == this.jsonData.length-1 )
     {
       this.jsonData = {};
-        console.log("end");
-        this.router.navigate(["usa"]);
+      this.router.navigate(["oceanie"]);
     }
     if ( this.currentMessage < this.jsonData.length-1)
     {

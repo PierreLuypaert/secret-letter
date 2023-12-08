@@ -3,18 +3,18 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-arctique',
-  templateUrl: './arctique.component.html',
-  styleUrls: ['./arctique.component.css']
+  selector: 'app-bresil',
+  templateUrl: './bresil.component.html',
+  styleUrls: ['./bresil.component.css']
 })
-export class ArctiqueComponent implements OnInit {
+export class BresilComponent implements OnInit {
   jsonData: any = {};
   currentMessage: number = 0;
 
   constructor(private router: Router, private http: HttpClient, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
-    this.http.get('/assets/scenes/premiere-scene-pere-noel/arctique.json').subscribe(data => {
+    this.http.get('/assets/scenes/bresil/bresil.json').subscribe(data => {
       this.jsonData = data;
     });
   }
@@ -31,7 +31,7 @@ export class ArctiqueComponent implements OnInit {
     {
       this.jsonData = {};
         console.log("end");
-        this.router.navigate(["usa"]);
+        this.router.navigate(["chine"]);
     }
     if ( this.currentMessage < this.jsonData.length-1)
     {
