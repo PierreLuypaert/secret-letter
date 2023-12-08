@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, OnInit, HostListener } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit, HostListener, Renderer2 } from '@angular/core';
 import { COLS, BLOCK_SIZE, ROWS, KEY, COLORS, LINES_PER_LEVEL, LEVEL, POINTS } from './constants';
 import { Piece, IPiece } from './piece.component';
 import { GameService } from './game.service';
@@ -44,14 +44,14 @@ export class BoardComponent implements OnInit {
       let p = this.moves[event.keyCode](this.piece);
       if (event.keyCode === KEY.SPACE) {
         while (this.service.valid(p, this.board)) {
-          this.points += POINTS.HARD_DROP;
+          this.points += POINTS.HARD_DROP / 10;
           this.piece.move(p);
           p = this.moves[KEY.DOWN](this.piece);
         }
       } else if (this.service.valid(p, this.board)) {
         this.piece.move(p);
         if (event.keyCode === KEY.DOWN) {
-          this.points += POINTS.SOFT_DROP;
+          this.points += POINTS.SOFT_DROP / 10;
         }
       }
       // this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
@@ -59,7 +59,7 @@ export class BoardComponent implements OnInit {
     }
   }
 
-  constructor(private service: GameService) { }
+  constructor(private service: GameService, private renderer: Renderer2, private el: ElementRef) { }
 
   ngOnInit(): void {
     this.initBoard();
@@ -112,6 +112,12 @@ export class BoardComponent implements OnInit {
     this.level = 0;
     this.board = this.getEmptyBoard();
     this.time = { start: 0, elapsed: 0, level: LEVEL[this.level] };
+    // const rightColumn = this.el.nativeElement.querySelector('.right-column');
+    // if (rightColumn) {
+    //   this.renderer.setStyle(rightColumn, 'margin-left', "0px");
+    //   // alert("test");
+    // }
+
   }
 
   animate(now = 0) {
@@ -120,6 +126,9 @@ export class BoardComponent implements OnInit {
       this.time.start = now;
       if (!this.drop()) {
         this.gameOver();
+        return;
+      } else if (this.points >= 44){
+        this.win();
         return;
       }
     }
@@ -141,7 +150,7 @@ export class BoardComponent implements OnInit {
     } else {
       this.freeze();
       this.clearLines();
-      if (this.piece.y === 0) {
+      if (this.piece.y <= 0) {
         // Game over
         return false;
       }
@@ -162,7 +171,7 @@ export class BoardComponent implements OnInit {
       }
     });
     if (lines > 0) {
-      this.points += this.service.getLinesClearedPoints(lines, this.level);
+      this.points += this.service.getLinesClearedPoints(lines, this.level) / 10;
       this.lines += lines;
       if (this.lines >= LINES_PER_LEVEL) {
         this.level++;
@@ -195,16 +204,42 @@ export class BoardComponent implements OnInit {
     });
   }
 
+  win(){
+    cancelAnimationFrame(this.requestId);
+    this.ctx.fillStyle = 'black';
+    this.ctx.fillRect(1, 3, 8, 3);
+    this.ctx.font = '1px Arial';
+    this.ctx.fillStyle = 'red';
+    this.ctx.fillText('BRAVO !', 2.5, 4.1);
+    this.ctx.fillText('Votre score : ' + this.floor(this.points), 1.3, 5.3);
+    // const rightColumn = this.el.nativeElement.querySelector('.right-column');
+    // if (rightColumn) {
+    //   this.renderer.setStyle(rightColumn, 'margin-left', 0);
+    //   alert("test");
+    // }
+
+  }
+
   gameOver() {
     cancelAnimationFrame(this.requestId);
     this.ctx.fillStyle = 'black';
-    this.ctx.fillRect(1, 3, 8, 1.2);
+    this.ctx.fillRect(1, 3, 8, 3);
     this.ctx.font = '1px Arial';
     this.ctx.fillStyle = 'red';
-    this.ctx.fillText('GAME OVER', 1.8, 4);
+    this.ctx.fillText('GAME OVER', 1.8, 4.1);
+    this.ctx.fillText('Votre score : ' + this.floor(this.points), 1.3, 5.3);
+    // const rightColumn = this.el.nativeElement.querySelector('.right-column');
+    // if (rightColumn) {
+    //   this.renderer.setStyle(rightColumn, 'margin-left', 0);
+    //   alert("test");
+    // }
   }
 
   getEmptyBoard(): number[][] {
     return Array.from({ length: ROWS }, () => Array(COLS).fill(0));
+  }
+
+  floor(point: number){
+    return Math.floor(point);
   }
 }

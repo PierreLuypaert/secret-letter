@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'home', component: PremiereScenePereNoelComponent, data: { animation: 'fadeInOut' } },
   { path: 'tetris', component: TetrisComponent, data: { animation: 'fadeInOut' } },
   { path: '', redirectTo: '/menu', pathMatch: 'full' },
+  { path: '**', pathMatch: 'full', component: TetrisComponent }, 
 ];
 
 @NgModule({

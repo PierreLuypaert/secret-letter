@@ -22,7 +22,7 @@ export class Piece implements IPiece {
         this.shape = SHAPES[typeId];
         this.color = COLORS[typeId];
         this.x = typeId === 4 ? 4 : 3;
-        this.y = 0;
+        this.y = typeId === 1 ? -1 : 0;
     }
 
     draw() {
