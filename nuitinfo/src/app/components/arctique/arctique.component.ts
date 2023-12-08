@@ -1,7 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import {playAudio} from "../../utils/sound";
+import {playAudio, stopAllAudio} from "../../utils/sound";
 
 @Component({
   selector: 'app-arctique',
@@ -32,6 +32,7 @@ export class ArctiqueComponent implements OnInit {
     if ( this.currentMessage == this.jsonData.length-1 )
     {
       this.jsonData = {};
+      stopAllAudio();
         this.router.navigate(['carte'], { queryParams: { numero: 1 } }); 
     }
     if ( this.currentMessage < this.jsonData.length-1)
