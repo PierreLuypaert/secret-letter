@@ -11,11 +11,11 @@ export class BulleComponent implements OnInit {
   @Input() messageObject:any = {};
   @Output() divClicked = new EventEmitter<string>();
   @Input() positionAndIndex: { top: number, left: number, index: number, transform: string } = { top: -150, left: -200, index:99, transform:"rotate(0deg)" };
-  randomPosAndIndex: any = [{top: -150, left:-200, index:99999, transform:"rotate(5deg)"},{top: -150, left:-350, index:999, transform:"rotate(-20deg)"}]
+  randomPosAndIndex: any = [{top: -500, left:1000, index:99999, transform:"rotate(5deg)"},{top: -150, left:-350, index:999, transform:"rotate(-20deg)"}]
   selectedAnswers: any = [];
   constructor() { }
   ngOnInit(): void {
-      this.positionAndIndex = this.randomPosAndIndex[Math.floor(Math.random() * this.randomPosAndIndex.length)];
+    this.positionAndIndex = this.randomPosAndIndex[Math.floor(Math.random() * this.randomPosAndIndex.length)];
   }
 
   compareArrays = (a: any[], b: any[]): boolean => {
@@ -28,7 +28,9 @@ export class BulleComponent implements OnInit {
   // Call this function after the child component has been initialized
   crossOrAnswer() {
     if(!this.messageObject.reponses) 
-    {
+    {      
+      this.positionAndIndex = this.randomPosAndIndex[Math.floor(Math.random() * this.randomPosAndIndex.length)];
+
       this.divClicked.emit("cross");
       return;
     }
