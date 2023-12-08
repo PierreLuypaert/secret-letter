@@ -33,7 +33,7 @@ Nous avons choisis les défis entreprises suivant :
 
 ## Notre concept
 
-Nous avons choisi de faire une petite aventure de noël. 
+Rigrole est une petite boule de Noël qui a toujours rêver de découvrir le monde. La livraison de cadeaux de cette année avec le Père Noël devrait lui permettre d'enfin réaliser son rêve. Suivez leur voyage qui les confronteront aux différents enjeux climatiques.
 
 ## L'Oeuf de Pâques
 
