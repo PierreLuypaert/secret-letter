@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import {playAudio, stopAllAudio} from "../../utils/sound";
 
 @Component({
   selector: 'app-premiere-scene-pere-noel',
@@ -14,6 +15,7 @@ export class PremiereScenePereNoelComponent implements OnInit {
   constructor(private router: Router, private http: HttpClient, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
+    playAudio("/assets/sounds/cheminee.mp3", true);
     this.http.get('/assets/scenes/premiere-scene-pere-noel/chalet.json').subscribe(data => {
       this.jsonData = data;
     });
@@ -29,6 +31,7 @@ export class PremiereScenePereNoelComponent implements OnInit {
     if ( this.currentMessage == this.jsonData.length-1 )
     {
       this.jsonData = {};
+      stopAllAudio();
       this.router.navigate(["arctique"]);
     }
     if ( this.currentMessage < this.jsonData.length-1)
