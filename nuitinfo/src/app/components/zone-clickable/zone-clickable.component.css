@@ -2,4 +2,5 @@
     cursor: pointer;
     position:absolute;
     background-color: red;
+    opacity: .2;
 }

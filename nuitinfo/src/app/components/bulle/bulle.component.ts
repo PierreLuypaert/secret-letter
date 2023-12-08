@@ -47,7 +47,7 @@ export class BulleComponent implements OnInit {
     });
 
     if(allGood){
-      this.divClicked.emit("cross");
+      this.divClicked.emit();
     }
   }
 
