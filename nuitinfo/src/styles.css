@@ -29,6 +29,12 @@ body {
     background-size: cover;
 }
 
+.bg-tetris {
+    background-image: url('/assets/tetris/tundrav2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .bg-perso {
     background-image: url('/assets/perso.png');
     background-repeat: no-repeat;
