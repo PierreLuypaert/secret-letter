@@ -46,3 +46,20 @@ Le premier oeuf de paques est le jeu tetris implémenté dans la page 404. Pour 
 ## Installation :
 
 Nous avons choisis de coder notre application sur Angular, avec un déploiment sur Firebase.
+
+## Sources documentaires :
+- [https://www.ipcc.ch/srocc/chapter/summary-for-policymakers/](https://www.ipcc.ch/srocc/chapter/summary-for-policymakers/)
+- [https://www.insu.cnrs.fr/fr/cnrsinfo/locean-puits-de-carbone-lavenir-incertain] (https://www.insu.cnrs.fr/fr/cnrsinfo/locean-puits-de-carbone-lavenir-incertain)
+- [https://www.ipcc.ch/report/ar6/wg2/downloads/report/IPCC_AR6_WGII_TechnicalSummary.pdf] (https://www.ipcc.ch/report/ar6/wg2/downloads/report/IPCC_AR6_WGII_TechnicalSummary.pdf)
+- [https://www.ipcc.ch/report/ar6/wg2/downloads/outreach/IPCC_AR6_WGII_FactSheet_SLR.pdf ] (https://www.ipcc.ch/report/ar6/wg2/downloads/outreach/IPCC_AR6_WGII_FactSheet_SLR.pdf )
+- [https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions] (https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions)
+- [https://www.epa.gov/transportation-air-pollution-and-climate-change/carbon-pollution-transportation ] (https://www.epa.gov/transportation-air-pollution-and-climate-change/carbon-pollution-transportation )
+- [https://reseauactionclimat.org/6e-rapport-du-giec-quelles-solutions-face-au-changement-climatique/ ] (https://reseauactionclimat.org/6e-rapport-du-giec-quelles-solutions-face-au-changement-climatique/ )
+- [https://www.epa.gov/transportation-air-pollution-and-climate-change/what-you-can-do-reduce-pollution-vehicles-and 
+] (https://www.epa.gov/transportation-air-pollution-and-climate-change/what-you-can-do-reduce-pollution-vehicles-and 
+)
+- [http://geoconfluences.ens-lyon.fr/informations-scientifiques/dossiers-regionaux/la-chine/articles-scientifiques/defis-environnementaux ] (http://geoconfluences.ens-lyon.fr/informations-scientifiques/dossiers-regionaux/la-chine/articles-scientifiques/defis-environnementaux )
+- [http://geoconfluences.ens-lyon.fr/informations-scientifiques/dossiers-regionaux/la-chine/articles-scientifiques/defis-environnementaux ] (http://geoconfluences.ens-lyon.fr/informations-scientifiques/dossiers-regionaux/la-chine/articles-scientifiques/defis-environnementaux )
+- [https://www.globalforestwatch.org/blog/climate/forests-carbon-emissions-sink-flux/ ] (https://www.globalforestwatch.org/blog/climate/forests-carbon-emissions-sink-flux/ )
+- [http://www1.onf.fr/lire_voir_ecouter/++oid++e37/@@display_media.html ] (http://www1.onf.fr/lire_voir_ecouter/++oid++e37/@@display_media.html )
+- [http://www1.onf.fr/lire_voir_ecouter/++oid++e46/@@display_media.html ] (http://www1.onf.fr/lire_voir_ecouter/++oid++e46/@@display_media.html )
