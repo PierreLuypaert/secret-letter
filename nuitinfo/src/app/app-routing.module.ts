@@ -3,8 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { TetrisComponent } from './components/tetris/tetris.component';
 import { PremiereScenePereNoelComponent } from './components/premiere-scene-pere-noel/premiere-scene-pere-noel.component';
 import { CarteComponent } from './components/carte/carte.component';
+import { ArctiqueComponent } from './components/arctique/arctique.component';
 
 const routes: Routes = [
+  { path: 'arctique', component: ArctiqueComponent, data: { animation: 'fadeInOut' } },
   { path: 'carte', component: CarteComponent, data: { animation: 'fadeInOut' } },
   { path: 'home', component: PremiereScenePereNoelComponent, data: { animation: 'fadeInOut' } },
   { path: 'tetris', component: TetrisComponent, data: { animation: 'fadeInOut' } },

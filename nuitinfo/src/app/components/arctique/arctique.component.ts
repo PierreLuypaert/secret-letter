@@ -3,18 +3,18 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-premiere-scene-pere-noel',
-  templateUrl: './premiere-scene-pere-noel.component.html',
-  styleUrls: ['./premiere-scene-pere-noel.component.css']
+  selector: 'app-arctique',
+  templateUrl: './arctique.component.html',
+  styleUrls: ['./arctique.component.css']
 })
-export class PremiereScenePereNoelComponent implements OnInit {
+export class ArctiqueComponent implements OnInit {
   jsonData: any = {};
   currentMessage: number = 0;
 
   constructor(private router: Router, private http: HttpClient, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
-    this.http.get('/assets/scenes/premiere-scene-pere-noel/chalet.json').subscribe(data => {
+    this.http.get('/assets/scenes/premiere-scene-pere-noel/arctique.json').subscribe(data => {
       this.jsonData = data;
     });
   }
@@ -26,10 +26,12 @@ export class PremiereScenePereNoelComponent implements OnInit {
   }
 
   cross(): void {
+    console.log(this.currentMessage);
     if ( this.currentMessage == this.jsonData.length-1 )
     {
       this.jsonData = {};
-      this.router.navigate(["arctique"]);
+        console.log("end");
+        //this.router.navigate(["arctique"]);
     }
     if ( this.currentMessage < this.jsonData.length-1)
     {

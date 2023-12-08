@@ -12,6 +12,7 @@ import { ZoneClickableComponent } from './components/zone-clickable/zone-clickab
 import { CarteComponent } from './components/carte/carte.component';
 import { BulleComponent } from './components/bulle/bulle.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ArctiqueComponent } from './components/arctique/arctique.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     ZoneClickableComponent,
     CarteComponent,
     BulleComponent,
+    ArctiqueComponent,
   ],
   imports: [
     BrowserModule,
