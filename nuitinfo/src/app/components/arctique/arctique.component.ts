@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import {playAudio} from "../../utils/sound";
 
 @Component({
   selector: 'app-arctique',
@@ -14,6 +15,7 @@ export class ArctiqueComponent implements OnInit {
   constructor(private router: Router, private http: HttpClient, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
+    playAudio("/assets/sounds/arctic.mp3", true);
     this.http.get('/assets/scenes/premiere-scene-pere-noel/arctique.json').subscribe(data => {
       this.jsonData = data;
     });

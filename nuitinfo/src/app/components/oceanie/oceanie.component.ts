@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {playAudio} from "../../utils/sound";
 
 @Component({
   selector: 'app-oceanie',
@@ -14,6 +15,7 @@ export class OceanieComponent implements OnInit {
   constructor(private router: Router, private http: HttpClient, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
+    playAudio("/assets/sounds/oceanie.mp3",true)
     this.http.get('/assets/scenes/oceanie/oceanie.json').subscribe(data => {
       this.jsonData = data;
     });
