@@ -14,3 +14,9 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.bg-tetris {
+    background-image: url('/assets/tetris/tundrav2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
