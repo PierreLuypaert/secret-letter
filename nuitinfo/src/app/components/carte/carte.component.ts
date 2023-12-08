@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -10,16 +10,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class CarteComponent implements OnInit {
   jsonData: any = {};
   currentMessage: number = 0;
-  step: number = 1;
+  step: number = 0;
   zoneClick: string[] = ["arctique","usa", "bresil", "chine", "oceanie"  ];
   mapOpened: any;
   constructor(private route: ActivatedRoute, private router: Router, private http: HttpClient, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
-    // Récupérez le paramètre 'numero' de l'URL
     this.route.queryParams.subscribe(params => {
-      this.step = +params['numero']; // Utilisez le + pour convertir la chaîne en nombre
-      // Faites quelque chose avec le nombre ici
+      this.step = +params['numero']; 
       this.http.get('/assets/carte/carte'+this.step+'.json').subscribe(data => {
         this.jsonData = data;
       });
@@ -29,14 +27,8 @@ export class CarteComponent implements OnInit {
 
   handleDivClick(idZone: string): void {
       const maMap = document.getElementById("map-" +idZone);
-      console.log(this.step);
-      console.log(this.zoneClick.indexOf(idZone));
-
       // Vérifiez si l'élément existe avant de tenter de le modifier
       if (maMap && this.step > this.zoneClick.indexOf(idZone)) {
-        console.log("ici");
-        // Modifiez la classe
-        // if (!this.isDisplayed){
         maMap.classList.remove("hidden");
         maMap.classList.add("block");
         this.mapOpened = maMap;
@@ -50,7 +42,6 @@ export class CarteComponent implements OnInit {
           }
         });
       } 
-      console.log('indexof' + this.zoneClick.indexOf(idZone))
       if( this.step == this.zoneClick.indexOf(idZone)) {
         console.log(this.jsonData[this.currentMessage].type=="click");
         if (this.jsonData[this.currentMessage].type=="click" && idZone == this.jsonData[this.currentMessage].div_id) {

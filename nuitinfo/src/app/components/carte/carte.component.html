@@ -1,4 +1,4 @@
-<div class="w-screen h-screen bg-carte">
+<div class="w-screen h-screen bg-carte" [ngStyle]="{'background-image': 'url(/assets/carte/background' + step + '.png)'}">
     <app-zone-clickable id="usa" class="block" [idZone]="'usa'" (divClicked)="handleDivClick($event)"
         [position]="{ top: 250, left: 400 }" [taille]="{ width: 200, height: 150 }">
     </app-zone-clickable>
