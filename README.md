@@ -25,12 +25,20 @@ Nous sommes 7 étudiants en 5e année d'Informatique et Technologie de l'Informa
 
 Nous avons choisis les défis entreprises suivant :
 
-  - Le défi: A la conquête de "l’œuf de pâques" de ASI RENNES
-  - Le défi: Jeu Thèmes ! de VIVERIS
-  - Le défi: Last XMas de CAPCOD
-  - Le défi: 404 Tetris de SCHUMAN POWER
-  - Le défi: Open Data et Géo-Intelligence de CAMPTOCAMP
+  - Le défi : A la conquête de "l’œuf de pâques" de ASI RENNES
+  - Le défi : Jeu Thèmes ! de VIVERIS
+  - Le défi : Last XMas de CAPCOD
+  - Le défi : 404 Tetris de SCHUMAN POWER
+  - Le défi : Open Data et Géo-Intelligence de CAMPTOCAMP
 
 ## Notre concept
 
 Nous avons choisi de faire une petite aventure de noël. 
+
+## L'Oeuf de Pâques
+
+Le premier oeuf de paques est le jeux tetris implémenté dans la page 404. Pour y accéder, il suffit de rentré un nom de page invalide, par exemple tests.
+
+## Installation :
+
+Nous avons choisis de coder notre application sur Angular, avec un déploiment sur Firebase.
